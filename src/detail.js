@@ -15,15 +15,51 @@ function renderBook(bookData) {
     singleBookContainer.innerHTML = '';
     const id = createTextElement("span", 'id: ' + bookData.id);
     const title = createTextElement("span", 'Titolo: ' + bookData.title);
-    const authors = createTextElement("span", 'Autori: ' + bookData.authors);
+    //autori
+    const authorsContainer = document.createElement('div');
+
+for (let i = 0; i < bookData.authors.length; i++) {
+    const author = bookData.authors[i];
+    const authorDiv = document.createElement('div');
+    const authorElement = createTextElement("span", 'Autore: ' + author.name);
+    const authorYob = createTextElement("span", 'Nascita: ' + (author.yob || "N/D"));
+    const authorYod = createTextElement("span", 'Morte: ' + (author.yod || "N/D"));
+
+    // Aggiunge gli elementi nel div autore
+    authorDiv.appendChild(authorElement);
+    authorDiv.appendChild(authorYob);
+    authorDiv.appendChild(authorYod);
+
+    // Aggiunge il div autore al contenitore generale
+    authorsContainer.appendChild(authorDiv);
+}
+  
+
+
+    //fine autori // inizio sommario
+    // const summaryContainer = document.createElement('div');
+    // const summaryData = createTextElement("span", 'Riepilogo: ');
+    // summaryContainer.appendChild(summaryData);
+    // for (let i = 0; i < bookData.summaries.length; i++) {
+    //     const summary = bookData.summaries[i];
+    //     const summariesElement = createTextElement("span", summary)
+    //     summaryContainer.appendChild(summariesElement);
+        
+    // }
+
+
+
+    
+
     
 
 
 
-
+    // singleBookContainer.appendChild(summary);
     singleBookContainer.appendChild(id);
     singleBookContainer.appendChild(title);
-    singleBookContainer.appendChild(authors);
+    singleBookContainer.appendChild(authorsContainer);
+    // singleBookContainer.appendChild(summaryContainer);
     
 }
 
