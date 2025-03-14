@@ -25,12 +25,11 @@ for (let i = 0; i < bookData.authors.length; i++) {
     const authorYob = createTextElement("span", 'Nascita: ' + (author.yob || "N/D"));
     const authorYod = createTextElement("span", 'Morte: ' + (author.yod || "N/D"));
 
-    // Aggiunge gli elementi nel div autore
     authorDiv.appendChild(authorElement);
     authorDiv.appendChild(authorYob);
     authorDiv.appendChild(authorYod);
 
-    // Aggiunge il div autore al contenitore generale
+    
     authorsContainer.appendChild(authorDiv);
 }
   
