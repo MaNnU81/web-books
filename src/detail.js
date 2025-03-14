@@ -17,12 +17,11 @@ function renderBook(bookData) {
     const title = createTextElement("span", 'Titolo: ' + bookData.title);
     //autori
     const authorsContainer = document.createElement('div');
-
-for (let i = 0; i < bookData.authors.length; i++) {
+ for (let i = 0; i < bookData.authors.length; i++) {
     const author = bookData.authors[i];
     const authorDiv = document.createElement('div');
     const authorElement = createTextElement("span", 'Autore: ' + author.name);
-    const authorYob = createTextElement("span", 'Nascita: ' + (author.yob || "N/D"));
+    const authorYob = createTextElement("span", 'Nascita: ' + (author.yob || "N/D"));   //.yob e . yod in file author.js (non capisco)
     const authorYod = createTextElement("span", 'Morte: ' + (author.yod || "N/D"));
 
     authorDiv.appendChild(authorElement);
