@@ -1,8 +1,9 @@
 export default class Author {
-    constructor(name, yob, yod) {
+    constructor(name, yob, yod, summaries) {
         this.name = name;
         this.yob = yob;
         this.yod = yod;
+		this.summaries = summaries;
     }
 
     getAge() {

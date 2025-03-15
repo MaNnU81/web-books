@@ -4,10 +4,10 @@ const queryParams = new URLSearchParams(window.location.search);
 const idString = queryParams.get('id');
 const id = parseInt(idString, 10);
 
-console.log(id);
+
 
 const service = new bookService();
-console.log('pippo', service);
+
 service.getBookFromId(id).then(book => renderBook(book));
 
 function renderBook(bookData) {
@@ -27,23 +27,16 @@ function renderBook(bookData) {
     authorDiv.appendChild(authorElement);
     authorDiv.appendChild(authorYob);
     authorDiv.appendChild(authorYod);
-
-    
     authorsContainer.appendChild(authorDiv);
 }
-  
+  //fine autori // inizio sommario
+  const summaryContainer = document.createElement('div');
+  const summary = createTextElement("span", 'Riassunto: ' +  bookData.summary);
+    summaryContainer.appendChild(summary);
+    //fine sommario
+    
 
 
-    //fine autori // inizio sommario
-    // const summaryContainer = document.createElement('div');
-    // const summaryData = createTextElement("span", 'Riepilogo: ');
-    // summaryContainer.appendChild(summaryData);
-    // for (let i = 0; i < bookData.summaries.length; i++) {
-    //     const summary = bookData.summaries[i];
-    //     const summariesElement = createTextElement("span", summary)
-    //     summaryContainer.appendChild(summariesElement);
-        
-    // }
 
 
 
@@ -53,11 +46,13 @@ function renderBook(bookData) {
 
 
 
-    // singleBookContainer.appendChild(summary);
+   
+    
     singleBookContainer.appendChild(id);
     singleBookContainer.appendChild(title);
     singleBookContainer.appendChild(authorsContainer);
-    // singleBookContainer.appendChild(summaryContainer);
+    singleBookContainer.appendChild(summaryContainer);
+    
     
 }
 
