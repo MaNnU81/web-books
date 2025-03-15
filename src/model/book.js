@@ -1,13 +1,25 @@
 import Author from './author.js';
 
 export default class Book {
-    constructor(id, title, authors = [] ,summary, subject = [], coverImage) {
+    constructor(id, title, authors = [] ,summary, translators = [], subject = [], bookshelves = [], languages = [], copyright, media_type, texthtml, coverImage, application, ebook, ascii, xml, stream, download_count) {
         this.id = id;
         this.title = title;
         this.authors = authors;
         this.summary = summary;
+        this.translators = translators;
         this.subject = subject;
+        this.bookshelves = bookshelves;
+        this.languages = languages;
+        this.copyright = copyright;
+        this.media_type = media_type;
+        this.texthtml = texthtml;
         this.coverImage = coverImage;
+        this.application = application;
+        this.ebook = ebook;
+        this.ascii = ascii;
+        this.xml = xml;
+        this.Stream = stream;
+        this.download_count = download_count;
     }
 }
 

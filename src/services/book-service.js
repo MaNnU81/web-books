@@ -59,10 +59,22 @@ export default class bookService {
             const title = bookData.title;
             const authors = this.getAuthorsName(bookData.authors);
             const summaries = bookData.summaries[0];
+            const translators = bookData.translators;
             const subjects = bookData.subjects;
+            const bookshelves = bookData.bookshelves;
+            const languages = bookData.languages;
+            const copyright = bookData.copyright;
+            const media_type = bookData.media_type;
+            const texthtml = bookData.formats["text/html"]
             const coverImg = bookData.formats["image/jpeg"];
+            const application = bookData.formats["application/epub+zip"];
+            const ebook = bookData.formats["application/x-mobipocket-ebook"];
+            const ascii = bookData.formats["text/plain; charset=us-ascii"];
+            const xml = bookData.formats["application/rdf+xml"];
+            const stream = bookData.formats["application/octet-stream"];
+            const download_count = bookData.download_count;
 
-            const newBook = new Book(id, title, authors, summaries, subjects, coverImg);
+            const newBook = new Book(id, title, authors, summaries,translators, subjects, bookshelves, languages, copyright, media_type, texthtml, coverImg, application, ebook, ascii, xml, stream, download_count);
             books.push(newBook);
         }
         return books;
