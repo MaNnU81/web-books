@@ -51,40 +51,35 @@ function renderBook(bookData) {
         const texthtml = document.createElement("a");
         texthtml.href = bookData.texthtml;
         texthtml.target = "_blank";
-        texthtml.textContent = "Text/html";
-        texthtml.classList.add('link');
+        texthtml.textContent = "text/html ";
+        
         
         const application = document.createElement("a");
         application.href = bookData.application;
         application.target = "_blank";
-        application.textContent = "Epub+Zip:";
-        application.classList.add('link');
+        application.textContent = "Applicazione Epub+Zip: ";
     
         const ebook = document.createElement("a");
         ebook.href = bookData.ebook;
         ebook.target = "_blank";
-        ebook.textContent = "x-mobipocket-ebook";
-        ebook.classList.add('link');
+        ebook.textContent = "application/x-mobipocket-ebook ";
 
         const ascii = document.createElement("a");
         ascii.href = bookData.ebook;
         ascii.target = "_blank";
-        ascii.textContent = "text/plain/ascii";
-        ascii.classList.add('link');
+        ascii.textContent = "text/plain charset=us-ascii ";
 
         const xml = document.createElement("a");
         xml.href = bookData.ebook;
         xml.target = "_blank";
-        xml.textContent = "rdf+xml";
-        xml.classList.add('link');
+        xml.textContent = "application/rdf+xml ";
 
         const stream = document.createElement("a");
         stream.href = bookData.ebook;
         stream.target = "_blank";
-        stream.textContent = "octet-stream";
-        stream.classList.add('link');
+        stream.textContent = "application/octet-stream ";
 
-        const download_count = createTextElement("span", 'download_count:' + bookData.download_count);
+        const download_count = createTextElement("span", 'download_count: ' + bookData.download_count);
         
         
         
