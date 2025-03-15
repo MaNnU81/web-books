@@ -8,7 +8,7 @@ export default class bookService {
     getBookData() {
 
         const DEV_BOOKS_URL = "/assets/books.json";
-        const PROD_BOOKS_URL = "assets/books.json";
+        const PROD_BOOKS_URL = "https://github.com/MaNnU81/web-books/blob/main/assets/books.json";
 
         const booksDataPromise = fetch(PROD_BOOKS_URL)
         .then(resp => resp.json())
