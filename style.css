@@ -113,6 +113,8 @@ h1 {
     width: 150px; /* Larghezza dell'immagine di copertina */
     height: auto;
     object-fit: cover;
+    -webkit-box-shadow: 6px 4px 4px -1px #57387D; 
+    box-shadow: 6px 4px 4px -1px #57387D;
 }
 
 .book-title {
@@ -120,6 +122,7 @@ h1 {
     grid-row: 1 / 2; /* Prima riga */
     text-align: left; /* Centra il testo */
     font-size: 50px;
+
 }
 
 .book-authors {
@@ -135,14 +138,14 @@ h1 {
 
 .book-translators {
     grid-column: 1 / 2; /* Prima colonna */
-    grid-row: 7 / 8; /* Settima riga */
+    grid-row: 6 / 7; /* Settima riga */
     text-align: left;
     
 }
 
 .book-media-type {
     grid-column: 1 / 2; /* Prima colonna */
-    grid-row: 8 / 8; /* Settima riga */
+    grid-row: 7 / 8; /* Settima riga */
     text-align: left;
     height: 20px;
 }
@@ -161,6 +164,8 @@ h1 {
     border: 2px solid rgba(9, 5, 247, 0.534);
     border-radius: 20px;
     padding: 10px;
+    -webkit-box-shadow: 6px 4px 4px -1px #57387D; 
+    box-shadow: 6px 4px 4px -1px #57387D;
 }
 
 .book-subject {
@@ -170,6 +175,8 @@ h1 {
     border: 2px solid rgba(9, 5, 247, 0.534);
     border-radius: 20px;
     padding: 10px;
+    -webkit-box-shadow: 6px 4px 4px -1px #57387D; 
+    box-shadow: 6px 4px 4px -1px #57387D;
 }
 
 .book-bookshelves {
@@ -179,6 +186,8 @@ h1 {
     border: 2px solid rgba(9, 5, 247, 0.534);
     border-radius: 20px;
     padding: 10px;
+    -webkit-box-shadow: 6px 4px 4px -1px #57387D; 
+    box-shadow: 6px 4px 4px -1px #57387D;
 }
 
 .book-download-count {
