@@ -22,7 +22,7 @@ function render(booksData) {
 
         const bookContainer = document.createElement('a');
         bookContainer.classList.add('book-card');
-        bookContainer.href = "/web-books/detail.html?id=" + book.id;
+        bookContainer.href = "/detail.html?id=" + book.id;
         bookContainer.target = "_blank";  //aggiunto per aprire su nuova tab
 
         const titleContainer = createTextElement("h5", 'Titolo: ' + book.title);        

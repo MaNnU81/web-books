@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    background-color: rgb(84, 193, 243);
+}
+
+.bottone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; 
+    border: 5px solid #006FE6; 
+    background-color: #007BFF; 
+    cursor: pointer;
+    padding: 0;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bottone img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Rende l'immagine rotonda */
+}
+
+.bottone:hover {
+    background-color: #0063CC;
+    border-color: #0056B3;
+}

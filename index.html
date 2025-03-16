@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web books</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1 class="titolo">Progetto Gutemberg</h1>
+        <!-- <h1 class="titolo">Progetto Gutemberg</h1> -->
 
 
     </header>
     <main>
-        <button class="bottone" onclick="getBooks()">Click me and we will find it!</button>
-        <div id="books-container">
+        <button class="bottone" onclick="redirectToIndex2()">
+            <img src="assets/logo.png" alt="Click me" style="width: 100%; height: auto;">
+        </button>
+
+        <script>
+        function redirectToIndex2() {
+            window.location.href = 'index2.html';
+        }
+        </script>
 
         </div>
     </main>
